@@ -10,7 +10,7 @@ We used the open-source [Kedro](https://kedro.org/) framework for project struct
 
 ![Screenshot of our best score](images/best_score.jpg)
 
-Submitted predications visualized.
+Submitted predictions visualized.
 
 ![Predictions](images/preds.png)
 
