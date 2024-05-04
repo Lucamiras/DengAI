@@ -47,8 +47,18 @@ Vegetation was highly correlated with the target variable, so we plotted it over
 ## Feature engineering
 These choices led to the biggest improvement in score:
 - Forward-filled missing values. Forward-fill seemed the best choice for time-series problems.
-- Implemented rolling averages of 2, 4 and 6 weeks respectively for 7 most correlated features, which allows the model to understand how time lag impacts case numbers.
-- Implemented cyclical encoding for ``weekofyear``.
+- Since mosquito infestations are correlated temporally (in the future) with past rainfall and temperature rises, we use a rolling window approach to encode the past as new features.
+- For this we implemented rolling averages of 2, 4 and 6 weeks into the past respectively for many temperature, humidity and precipitation related features.  This allows the model to understand how time lag impacts new cases.
+- The variables we implemented rolling averages in this version are:
+  - 'reanalysis_min_air_temp_k'
+  - 'station_min_temp_c'
+  - 'reanalysis_air_temp_k'
+  - 'reanalysis_avg_temp_k'
+  - 'reanalysis_dew_point_temp_k'
+  - 'reanalysis_specific_humidity_g_per_kg'
+  - 'station_avg_temp_c'
+- In order to enforce week of year (0--52) to also show proximity of the end of the year to the beginning, we implemented cyclical encoding for ``weekofyear`` mapping the weeks (52) on a circle to cartesian coordinates thereby introducing Eucledian proximity in a distance score.
+- Ideally one would use the number of cases in past weeks to also indicate trends for future predictions. However, given that the test data does not provide this data, it was ignored so as not to predict into the far  future, using predictions of the near future. Doing that would result in uncontrolled drift and hence was not introduced.
 
 ## Repository Structure
 - **conf**: Contains Kedro config files.
