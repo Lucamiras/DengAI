@@ -6,9 +6,15 @@ We used the open-source [Kedro](https://kedro.org/) framework for project struct
 
 ## Outcomes
 
-Final submission score: ``24.57``
+**Final submission score: ``24.57``**
 
 ![Screenshot of our best score](images/best_score.jpg)
+
+We used the **Random Forest Regressor** with the following hyperparameters:
+- max_depth: 10
+- n_estimators: 500
+- random_state: 42
+- min_sample_split: 5
 
 Predications visualized.
 
