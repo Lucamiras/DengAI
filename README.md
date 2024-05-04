@@ -15,14 +15,16 @@ You can run this repository locally to test it out:
 1. Clone this repository into a local project folder: 
     - ``git clone git@github.com:Lucamiras/DengAI.git``
 2. Create a new conda environment:
-    - ``conda create [YOUR ENVIRONMENT NAME] python=3.12``
-3. Activate your new environment:
+    - ``conda create -n [YOUR ENVIRONMENT NAME] python=3.12``
+3. Go to your cloned repository:
+    - ``cd DengAI``
+4. Activate your new environment:
     - ``conda activate [YOUR ENVIRONMENT NAME]``
-4. Install dependencies:
+5. Install dependencies:
     - ``pip install -r requirements.txt``
-5. To run the full pipeline:
+6. To run the full pipeline:
     - ``kedro run --pipeline __default__``
-6. Once the pipeline has run, you can find the new predictions ``.csv`` in ``data/07_model_output``
+7. Once the pipeline has run, you can find the new predictions file ``submissions.csv`` in ``data/07_model_output``
 
 ## Data exploration
 We plotted the development of total cases to get an intuition for features that impact number of cases:
@@ -53,3 +55,6 @@ These choices led to the biggest improvement in score:
 
 ## Noteworthy
 - In this project, we are training the model on the entire dataset. In a previous version we used train and validation sets, but found that our validation score was almost never reflecting a real submission score increase. Due to this and the time series nature of the problem, we chose to train the model on the whole dataset. Others may disagree with this and return to 
+
+## Acknowledgements
+Thanks to Data Science Retreat, our teacher Paul Mora, as well as the team, Arian & Rahul.
