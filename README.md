@@ -2,7 +2,7 @@
 
 This repository contains the code and models developed for the [Dengue Prediction competition](https://www.drivendata.org/competitions/44/dengai-predicting-disease-spread/page/80/) hosted on [drivendata.org](https://www.drivendata.org). The goal of this competition is to **predict the number of dengue fever cases** each week in two cities: San Juan, Puerto Rico, and Iquitos, Peru.
 
-We used the Kedro framework for project structure and end-to-end implementation.
+We used the open-source [Kedro](https://kedro.org/) framework for project structure and end-to-end implementation.
 
 ## Outcomes
 
@@ -10,11 +10,15 @@ Final submission score: ``24.57``
 
 ![Screenshot of our best score](images/best_score.jpg)
 
+Predications visualized.
+
+![Predictions](images/preds.png)
+
 ## Try it out
-You can run this repository locally to test it out:
+You can run this repository locally to test it out. To use the conda commands, you should have Anaconda installed for this:
 1. Clone this repository into a local project folder: 
     - ``git clone git@github.com:Lucamiras/DengAI.git``
-2. Create a new conda environment:
+2. Create a new conda environment for this project (as we need to install some packages):
     - ``conda create -n [YOUR ENVIRONMENT NAME] python=3.12``
 3. Go to your cloned repository:
     - ``cd DengAI``
@@ -33,9 +37,12 @@ Looking at the distribution over time by city, we see spikes of outbreaks around
 
 ![Graph of total cases](images/box_total_by_city.png)
 
-Looking at the most correlated feature, ``min_air_temperature_k`` readings seem to align with spikes in ``total_cases``.
+Looking at ``min_air_temperature_k`` readings seem to align with spikes in ``total_cases``. This variable was interesting to us because literature suggests that minimum temperature has a strong impact on mosquito populations.
 
 ![Graph of total cases and temperature](images/line_min_air_temp.png)
+
+Vegetation was highly correlated with the target variable, so we plotted it over time for both cities to check on any noticable patterns.
+![Graph of ndvis ](images/nvids.png)
 
 ## Feature engineering
 These choices led to the biggest improvement in score:
