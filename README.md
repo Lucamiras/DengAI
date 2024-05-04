@@ -17,18 +17,30 @@ Predications visualized.
 ## Try it out
 You can run this repository locally to test it out. To use the conda commands, you should have Anaconda installed for this:
 1. Clone this repository into a local project folder: 
-    - ``git clone git@github.com:Lucamiras/DengAI.git``
+    ```bash
+    git clone git@github.com:Lucamiras/DengAI.git
+    ```
 2. Create a new conda environment for this project (as we need to install some packages):
-    - ``conda create -n [YOUR ENVIRONMENT NAME] python=3.12``
-3. Go to your cloned repository:
-    - ``cd DengAI``
-4. Activate your new environment:
-    - ``conda activate [YOUR ENVIRONMENT NAME]``
-5. Install dependencies:
-    - ``pip install -r requirements.txt``
-6. To run the full pipeline:
-    - ``kedro run --pipeline __default__``
-7. Once the pipeline has run, you can find the new predictions file ``submissions.csv`` in ``data/07_model_output``
+    ```bash
+   conda create -n [YOUR ENVIRONMENT NAME] python=3.12
+    ```
+4. Go to your cloned repository:
+    ```bash
+   cd DengAI
+    ```
+6. Activate your new environment:
+    ```bash
+   conda activate [YOUR ENVIRONMENT NAME]
+    ```
+8. Install dependencies:
+    ```bash
+   pip install -r requirements.txt
+    ```
+10. To run the full pipeline:
+    ```bash
+    kedro run --pipeline __default__
+    ```
+12. Once the pipeline has run, you can find the new predictions file ``submissions.csv`` in ``data/07_model_output``
 
 ## Data exploration
 We plotted the development of total cases to get an intuition for features that impact number of cases:
