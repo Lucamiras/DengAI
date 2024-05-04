@@ -50,7 +50,6 @@ These choices led to the biggest improvement in score:
 - **src**: Python files for two Kedro pipelines:
     - Data Processing: Handle null values, create rolling averages, encodings, dropping unused columns
     - Data Science: Split data into X and y, train model, create submissions
-
 - **README.md**: Overview of the project, outcomes, and implementation notes (you're here!).
 
 ## Noteworthy
