@@ -10,15 +10,15 @@ We used the open-source [Kedro](https://kedro.org/) framework for project struct
 
 ![Screenshot of our best score](images/best_score.jpg)
 
+Submitted predications visualized.
+
+![Predictions](images/preds.png)
+
 We used the **Random Forest Regressor** with the following hyperparameters:
 - max_depth: 10
 - n_estimators: 500
 - random_state: 42
 - min_sample_split: 5
-
-Predications visualized.
-
-![Predictions](images/preds.png)
 
 ## Try it out
 You can run this repository locally to test it out. To use the conda commands, you should have Anaconda installed for this:
