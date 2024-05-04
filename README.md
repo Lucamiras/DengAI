@@ -53,7 +53,7 @@ These choices led to the biggest improvement in score:
 - **README.md**: Overview of the project, outcomes, and implementation notes (you're here!).
 
 ## Noteworthy
-- In this project, we are training the model on the entire dataset. In a previous version we used train and validation sets, but found that our validation score was almost never reflecting a real submission score increase. Due to this and the time series nature of the problem, we chose to train the model on the whole dataset. Others may disagree with this and return to 
+- In this project, we are training the model on the entire dataset. In a previous version we used train and validation sets, but found that our validation score was almost never reflecting a real submission score increase. Due to this and the time series nature of the problem, we chose to train the model on the whole dataset after first figuring out the best hyperparameters on a train-val-split of 80/20.
 
 ## Acknowledgements
 Thanks to Data Science Retreat, our teacher Paul Mora, as well as the team, Arian & Rahul.
